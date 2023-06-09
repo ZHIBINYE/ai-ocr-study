@@ -33,7 +33,7 @@ const App = () => {
         },
       });
       post_api
-        .post<File>("https://192.168.3.84:5010/api/img/ul", params, {
+        .post<File>("https://<バックエンドの起動URL>:5010/api/img/ul", params, {
           responseType: "blob",
         })
         .then(
