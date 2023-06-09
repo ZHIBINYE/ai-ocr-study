@@ -11,6 +11,9 @@
 # production
 **/build
 
+# python
+**/__pycache__
+
 # misc
 **/.DS_Store
 **/.env.local
@@ -24,5 +27,5 @@
 
 .env
 
-test.mp3
-test.png
+**/test.mp3
+**/test.png
