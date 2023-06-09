@@ -33,7 +33,7 @@ const App = () => {
         },
       });
       post_api
-        .post<File>("http://localhost:5000/api/img/ul", params, {
+        .post<File>("https://192.168.3.84:5010/api/img/ul", params, {
           responseType: "blob",
         })
         .then(

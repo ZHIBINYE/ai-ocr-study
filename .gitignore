@@ -23,3 +23,6 @@
 **/yarn-error.log*
 
 .env
+
+test.mp3
+test.png

@@ -3,9 +3,12 @@ from flask import Flask, request, jsonify, send_file
 from flask_cors import CORS
 import easyocr
 from gtts import gTTS
+import ssl
 
 app = Flask(__name__)
 CORS(app)
+context = ssl.SSLContext(ssl.PROTOCOL_TLSv1_2)
+context.load_cert_chain('../openssl/server.crt', '../openssl/server.key')
 
 @app.route("/")
 def index():
@@ -26,4 +29,4 @@ def file_upload():
     return send_file("../../test.mp3")
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000, debug=True)
+    app.run(host="0.0.0.0", port=5010, ssl_context=context, debug=True)
